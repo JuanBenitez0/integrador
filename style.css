@@ -126,7 +126,7 @@ main {
   color: white;
   font-family: var(--title-font);
   font-size: calc(var(--base-font-size) * 4.69);
-  margin: 60% 0 1%;
+  margin-top: calc(var(--base-height) * 2.75);
 }
 
 /*background vid*/
@@ -246,7 +246,7 @@ main {
 
 /* services */
 .side-container {
-  height: calc(var(--base-height) * 6.5);
+  height: 100%;
   width: 50%;
   position: relative;
   overflow: hidden;
@@ -292,6 +292,10 @@ main {
   display: inline-flex;
   align-items: center;
   color: var(--grey);
+}
+
+.link {
+  font-size: calc(var(--base-font-size));
 }
 
 .link i {
@@ -344,7 +348,7 @@ footer {
 }
 
 .footer-list__link i {
-  margin-right: 10px;
+  margin-right: 10%;
 }
 
 /* footer-top */
@@ -383,21 +387,23 @@ footer {
     --base-font-size: 9px;
     --base-height: 50px;
   }
+  /*cut-out-text*/
   .list span {
     display: none;
   }
   .footer-list {
-    gap: 15px;
-    padding: 2% 5%;
+    gap: 5px;
+    padding: 1% 0;
     justify-content: space-evenly;
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 426px) {
   :root {
-    --base-font-size: 6.5px;
+    --base-font-size: 6px;
     --base-height: 35px;
   }
+  /*burger menu*/
   .navbar-list {
     background: var(--gradient);
     position: absolute;
@@ -427,5 +433,20 @@ footer {
   }
   #toggler:checked ~ .navbar-list {
     display: flex;
+  }
+  /*resizing*/
+  #services,
+  #dealerships {
+    height: calc(var(--base-height) * 4);
+  }
+  .floating__text {
+    top: 65%;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --base-font-size: 4.5px;
+    --base-height: 25px;
   }
 }
