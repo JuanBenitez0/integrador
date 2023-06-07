@@ -78,6 +78,7 @@ header {
 
 .navbar .lni {
   color: var(--grey);
+  font-size: calc(var(--base-font-size) * 1.5);
 }
 
 /* toggler menu */
